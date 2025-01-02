@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  color: #FFFFF1;
+  animation: fadeIn 1.5s;
+}
+
+.result::-webkit-scrollbar {
+  display: none;
+}
+
+.loader hr {
+  animation: loader 3s infinite linear;
+}
+
+.main {
+  background: #1e1f20;
+}
+
+
+@keyframes loader {
+  0% {
+    background-position: -800px 0px;
+  }
+  100% {
+    background-position: 800px 0px;
+  }
+}
+
+/* Responsive et animation fadeIn en CSS parceque j'ai trop la flemme😅 */
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.sidebar .recent {
+  animation: fadeIn 1.5s;
+}
+
+@media (max-width: 600px) {
+  .sidebar {
+    display: none;
+  }
+  .main-bottom input {
+    flex: none;
+    width: 150px;
+  }
+  .main-bottom img {
+    width: 20px;
+  }
+  .search-box {
+    padding: 5px 10px;
+  }
+  .search-box div {
+    gap: 5px;
+  }
+}
