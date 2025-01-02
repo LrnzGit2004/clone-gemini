@@ -10,7 +10,7 @@
 #root {
   min-height: 100vh;
   display: flex;
-  color: #FFFFF1;
+  color: #fffff1;
   animation: fadeIn 1.5s;
 }
 
@@ -25,7 +25,6 @@
 .main {
   background: #1e1f20;
 }
-
 
 @keyframes loader {
   0% {

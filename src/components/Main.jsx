@@ -16,7 +16,7 @@ const Main = () => {
   return (
     <div className="main flex-1 min-h-screen pb-[15vh] relative">
       <div className="nav flex justify-between items-center text-[22px] p-5 text-[#FFFFF1]">
-        <p>Gemini-clone</p>
+        <p>Lorryl-IA</p>
         <img src={assets.user_icon} alt="" className="w-10 rounded-full" />
       </div>
       <div className="main-container max-w-[900px] m-auto">
@@ -30,8 +30,10 @@ const Main = () => {
               </p>
               <p>Comment puis-je t'aider aujourd'hui ?</p>
             </div>
-            <p className="text-xl text-[#FFFFF1] pl-5">Suggestions...</p>
-            <div className="cards grid grid-cols-1 gap-[15px] md:grid-cols-2 lg:grid-cols-4 p-5 pt-1  ">
+            <p className="text-xl text-[#FFFFF1] pl-5 hidden md:block">
+              Suggestions...
+            </p>
+            <div className="hidden cards md:grid md:gap-[15px] md:grid-cols-2 lg:grid-cols-4 md:p-5 md:pt-1">
               <div
                 className="card h-[200px] p-[15px] bg-[#282A2C] rounded-lg relative cursor-pointer hover:bg-[#727174]/70"
                 onClick={() => {
@@ -136,16 +138,16 @@ const Main = () => {
           </div>
         )}
 
-        <div className="main-bottom absolute bottom-0 w-full max-w-[900px] py-0 px-5 m-auto ">
-          <div className="search-box flex justify-between items-center border py-2.5 px-5 gap-5 rounded-[50px] text-[#FFFFF1] bg-[#1E1F20">
+        <div className="main-bottom absolute bottom-0  max-w-[900px] py-0 px-5 m-auto">
+          <div className="search-box flex justify-between items-center border py-2.5 px-5 gap-5 rounded-[50px] text-[#FFFFF1] bg-[#1E1F20]">
             <input
               type="text"
               placeholder="Entrez un prompt ici..."
-              className="flex-1 bg-transparent border-none  outline-none p-2 text-[18px]"
+              className="flex-1 bg-transparent border-none outline-none p-2 text-[18px]"
               onChange={(e) => setInput(e.target.value)}
               value={input}
             />
-            <div className="flex items-center gap-5 ">
+            <div className="flex items-center gap-5">
               <img
                 src={assets.gallery_icon}
                 alt=""
